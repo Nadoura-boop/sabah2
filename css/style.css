@@ -1,0 +1,488 @@
+:root{
+    --cardinal:#be1d2c;
+    --matisse:#15669e;
+    --red-color: #ff0000;
+    --yellow-color: #ffff00;
+    --background-color: #f8f9fa; /* لون الخلفية */
+    --text-color: #000000a4; /* لون النص */
+    --link-color: #007bff; /* لون الروابط */
+    --button-color: #28a745; /* لون الأزرار */
+    --heading-color: #dc3545; /* لون العناوين */
+    --border-color: #ced4da; /* لون الحدود */
+    --card-background: #ffffff; /* لون خلفية البطاقات */
+    --secondary-text-color: #6c757d; /* لون النص الثانوي */
+}
+*{
+    direction: rtl;
+    text-decoration: none;
+    list-style: none;
+    
+    
+   
+}
+
+body{
+    font-family: "Cairo", serif;
+    background-color: #e2d8d800;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Cairo", serif;
+
+}
+
+/* navbar_start */
+.navbar{
+   
+    padding: .5rem;
+
+    background-color: var(--background-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   
+}
+
+.container{
+    max-width:100%;
+    margin: auto;
+    box-sizing: border-box;
+    
+}
+@media (max-width: 468px) {
+    
+.container{
+    max-width:100%;
+    margin: auto;
+    box-sizing: border-box;
+    
+}
+
+     .navbar{
+        width: 100%;
+    }
+}
+
+.navbar .navbar-nav .nav-link{
+    color: var(--matisse);
+    transition: color 0.3s ease-in;
+    
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--cardinal);
+   
+}
+.navbar .navbar-toggler{
+    color: var(--matisse);
+    font-size: 25px;
+    border-color: var(--cardinal);
+    border-width: 2px;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    color: var(--matisse);
+}
+.container ul  {
+    font-family: "cairo", serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.navbar {
+    position: fixed; /* لجعل الناف بار ثابت */
+    top: 0; /* لتثبيته في أعلى الصفحة */
+    width: 100%; /* ليغطي عرض الصفحة بالكامل */
+   
+   
+    transition: top 0.3s ease, background 0.3s ease; /* حركة سلسة */
+    /* z-index: 1000; لضمان ظهور الناف بار فوق المحتوى */
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+}
+.navbar {
+    position: fixed; /* لجعل الناف بار ثابت */
+    top: 0; /* لتثبيته في أعلى الصفحة */
+    width: 100%; /* ليغطي عرض الصفحة بالكامل */
+    background: rgba(214, 222, 228, 0.5); /* خلفية شفافة */
+    backdrop-filter: blur(10px); /* تأثير البلور */
+    transition: top 0.3s ease, background 0.3s ease; /* حركة سلسة */
+    z-index: 1000; /* لضمان ظهور الناف بار فوق المحتوى */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+}
+/*home_start */
+.home{
+    width: 95%;
+    padding-top: 250px;     
+    margin: auto;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+    flex-direction: column;
+}
+.home .who{
+    background-image: linear-gradient( 45deg,var(--cardinal)40%, var(--matisse)60%);
+    width: 100%;
+    height: 60px;
+
+
+
+}
+.home .who p{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    font-family: "cairo";
+    white-space: nowrap;
+
+}
+@media (max-width: 768px) {
+    .home .who p{
+        font-size: 17px;
+    }
+    .home {
+        padding-top: -100px;    }
+}
+
+.home .img{
+    flex: 1 1 300px;
+}
+.home .img img{
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* home_end */
+
+
+.main-title h2{
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--matisse);
+}
+.main-title::after{
+    content: '';
+    width: 500px;
+    height: 3px;
+    background-color: var(--matisse);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    
+}
+/* product cards */
+.featured-products .main-title {
+    padding-bottom: 50px; /* تقليل المسافة */
+}
+
+.product {
+    aspect-ratio: 1;
+    position: relative;
+    background-color: rgba(214, 222, 228, 0.6);
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20%; /* تحسين الشكل */
+}
+
+.product:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product .img-product img {
+    width: 90%;
+    border-radius: 10%; /* إضافة تأثير دائري خفيف للصورة */
+}
+
+.product:hover .img-product img {
+    cursor: pointer;
+}
+
+.product h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--matisse);
+    transition: color 0.3s ease;
+}
+
+.product h3:hover {
+    color: var(--dark-blue);
+}
+
+.mySwiper {
+    overflow: hidden;
+    padding: 20px 10px;
+    border-radius: 15px; /* تحسين شكل السلايدر */
+}
+@media (max-width: 768px) {
+    .products {
+        height: 100px;
+    }
+    .featured-products {
+        margin-top: -150px; /* تقليل المسافة بإضافة قيمة سالبة */
+    }
+
+    .img-product img {
+        width: 100%; /* جعل الصورة تأخذ عرض المنتج بالكامل */
+        height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    }
+    .product h3 {
+        white-space: nowrap; /* يمنع النص من الانتقال إلى سطر جديد */
+        overflow: hidden; /* يخفي النص الذي يتجاوز العرض */
+        font-size: smaller;
+        width: 100%;
+        margin-top: -10%;
+    }
+}
+
+/* partner-companies */
+
+.partner-companies {
+    padding: 100px 0;
+}
+.partner-companies .main-titl{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--matisse);
+    position: relative;
+    top: -70px;
+    white-space: nowrap;
+}
+
+ .main-titl::after{
+    content: '';
+    width: 500px;
+    height: 3px;
+    background-color: var(--matisse);
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 15%); /* خمسة أعمدة متساوية العرض */
+    gap: 10px;
+    justify-content: center;
+    padding:  20px;
+}
+
+.partner-card {
+    background-color: var(--text-color);
+    border: 2px solid ;
+    width: fit-content;
+    border-radius: 25%;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    mix-blend-mode: multiply;
+
+}
+
+.partner-logo {
+    height: auto;
+    filter: grayscale(100%); /* تحويل اللوجو إلى أبيض وأسود */
+    transition: filter 0.3s ease;
+    
+}
+
+.partner-card:hover {
+    transform: translateY(-5px); /* تأثير التحويم */
+}
+
+.partner-card:hover .partner-logo {
+    filter: grayscale(0%); /* إعادة اللون عند التحويم */
+}
+@media (max-width: 768px) {
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap:5px;
+        transform: scale(.8);
+        padding: 0;
+        margin: 0;
+    }
+
+.partner-companies{
+    padding:50px ;
+}
+.partner-companies .main-titl{
+    position: relative;
+    top: -30px;
+}
+    .partner-card {
+        display: inline-block; /* عرض العناصر بشكل أفقي */
+        
+    }
+
+    .partner-logo {
+        padding: 5px;
+    }
+}
+
+/* partner-companies-end */
+
+/* testimonials-start */
+.testimonials {
+    transform: scale(0.8); /* تم تعديل القيمة هنا لتصغير المنتجات بنسبة 20% */
+     margin-top: -150px;
+     height: 500px;
+    background-color: #f8f9fa; /* لون خلفية القسم */
+   
+}
+@media (max-width: 768px){
+    .testimonials {
+        height: auto;
+    }
+}
+
+.main-title h2 {
+    color: var(--matisse); 
+}
+
+.testimonial-card {
+    background-color: #ffffff; /* لون خلفية البطاقة */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); /* تأثير التحويم */
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--text-color);
+}
+
+.customer-name {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--link-color);
+}
+/* testimonials-end */
+
+/* footer-start */
+.footer {
+    display: flex;
+    height: 370px; /* ارتفاع الفوتر */
+    background: linear-gradient(
+        90deg, 
+        var(--matisse) 50%, /* اللون الأزرق (Matisse) */
+        var(--cardinal) 50% /* اللون الأحمر (Cardinal) */
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.left-section {
+    width: 50%;
+    background-color: var(--matisse); /* اللون الأزرق */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.contact-logo{
+    display: flex;
+    gap: 20px;
+}
+.contact-logo a{
+    color: white;
+}
+
+.right-section {
+    width: 50%;
+    background-color: var(--cardinal); /* اللون الأحمر */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%; /* جعل العرض يتكيف مع الشاشات الصغيرة */
+    max-width: 400px; /* تحديد أقصى عرض للخريطة */
+}
+.map-container p{
+    color: white;
+    text-align: center;
+}
+.map-title {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+}
+
+iframe {
+    width: 450px;
+    height: 250px;
+    border: none;
+    border-radius: 15px;
+    margin-right: -120px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي في الشاشات الصغيرة */
+        height: auto; /* ارتفاع الفوتر يتكيف مع المحتوى */
+        
+    }
+    iframe{
+        width: 300px;
+        margin-right: -10px;
+
+    }
+
+    .left-section, .right-section {
+        width: 100%; /* جعل الأقسام تأخذ العرض الكامل */
+        padding: 20px; /* إضافة padding لتجنب التصاق المحتوى بالحواف */
+    }
+
+    .map-container {
+        padding: 15px; /* تقليل padding في الشاشات الصغيرة */
+    }
+
+    .map-title {
+        font-size: 20px; /* تصغير حجم العنوان في الشاشات الصغيرة */
+    }
+
+    iframe {
+        height: 150px; /* تصغير ارتفاع الخريطة في الشاشات الصغيرة */
+    }
+}
+/* footer-end */
+
+@media (max-width: 500px) {
+    
+    iframe{
+        width: 300px;
+        margin-right: -80px;
+
+    }
+
+}
