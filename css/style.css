@@ -282,7 +282,7 @@ body{
 }
 
 .partner-card {
-    background-color: var(--text-color);
+    background-color:white;
     border: 2px solid ;
     width: fit-content;
     border-radius: 25%;
